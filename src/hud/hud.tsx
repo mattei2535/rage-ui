@@ -1,14 +1,14 @@
-import React from "react";
 import '../index.css';
-import * as rpc from 'rage-rpc';
+import '../auth/auth' 
 
 const Hud = () => {
+    
     return (
-        <div className="font-serif font-bold text-center text-white">
+        <div className="font-serif font-bold text-center text-white mt-2">
             WORK IN PROGRESS
         </div>
     )
 }
 
 
-export default Hud
+export default Hud;
