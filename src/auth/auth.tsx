@@ -49,7 +49,7 @@ const Auth = () => {
                             username: e.target.value
                         })
                     }}
-                    required type='text' className='py-[30px] font-serif my-[80px] mx-[220px] w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center'/>
+                    placeholder='username' autoFocus={true} required type='text' className='py-[30px] font-serif my-[80px] mx-[220px] w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center'/>
                     <input
                     onChange={(e) => {
                         e.preventDefault()
@@ -58,7 +58,7 @@ const Auth = () => {
                             email: e.target.value
                         })
                     }}
-                    required type="text" className='py-[30px] mx-[220px] block w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center' />
+                    placeholder='email' required type="text" className='py-[30px] mx-[220px] block w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center' />
                     <input
                     onChange={(e) => {
                         e.preventDefault()
@@ -67,7 +67,7 @@ const Auth = () => {
                             password: e.target.value
                         })
                     }}
-                    required type='password' className='py-[30px] font-serif my-[80px] mx-[220px] w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center'/>
+                    placeholder='password' required type='password' className='py-[30px] font-serif my-[80px] mx-[220px] w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center'/>
                     <button 
                         onClick={() => {setAuthInterface('login'); rpc.callServer('registerInfos', ({username: registerData.username, email: registerData.email, password: registerData.password}))}}
                         type="button" 
@@ -113,7 +113,7 @@ const Auth = () => {
                             username: e.target.value
                         })
                     }}
-                    required type='text' className='py-[30px] font-serif my-[100px] mx-[220px] w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center'/>
+                    placeholder='username' autoFocus={true} type='text' className='py-[30px] font-serif my-[100px] mx-[220px] w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center'/>
                     <input
                     onChange={(e) => {
                         e.preventDefault()
@@ -122,7 +122,7 @@ const Auth = () => {
                             password: e.target.value
                         })
                     }}                    
-                    required type="password" className='py-[30px] mx-[220px] block w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center' />
+                    placeholder='password' type="password" className='py-[30px] mx-[220px] block w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center' />
 
                     <button 
                         onClick={() => rpc.callServer('checkLoginData', ({username: loginData.username, password: loginData.password}))}
