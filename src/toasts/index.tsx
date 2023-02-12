@@ -21,6 +21,7 @@ const Toasts = () => {
         draggable={false}
         pauseOnHover={false}
         transition={Slide}
+        limit={3}
         theme="dark"
         />
         
