@@ -3,12 +3,14 @@ import * as rpc from 'rage-rpc'
 import { useState } from 'react';
 import Hud from '../hud/hud';
 
+
 const Auth = () => {
 
     const [authInterface, setAuthInterface] = useState('login')
     const [registerData, setRegisterData] = useState<({username: string, email: string, password: string})>({username: '', email: '', password: ''})
     const [loginData, setLoginData] = useState<({username: string, password: string})>({username: '', password: ''})
     const [authState, setAuthState] = useState(false)
+
 
     rpc.on('mti:authSystem', () => {
         setAuthState(true);
