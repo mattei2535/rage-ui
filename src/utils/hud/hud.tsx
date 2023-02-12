@@ -1,9 +1,8 @@
-import '../index.css';
-import '../auth/auth' 
-import { useState } from 'react';
-import * as rpc from 'rage-rpc'
+import '../../index.css';
+import '../../systems/auth/auth' 
 
 const Hud = () => {
+
     return (
         <div>
             <h1 className="font-serif font-bold text-center text-white mt-2">WORK IN PROGRESS</h1>

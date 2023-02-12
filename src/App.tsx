@@ -1,6 +1,6 @@
 import './index.css'
-import Auth from './auth/auth'
-import Toasts from './toasts';
+import Auth from './systems/auth/auth'
+import Toasts from './utils/toasts'
 
 const App = () => {
 

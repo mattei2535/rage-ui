@@ -1,7 +1,7 @@
-import '../index.css';
+import '../../index.css';
 import * as rpc from 'rage-rpc'
 import { useState } from 'react';
-import Hud from '../hud/hud'
+import Hud from '../../utils/hud/hud'
 
 const Auth = () => {
 
