@@ -1,8 +1,7 @@
 import '../index.css';
 import * as rpc from 'rage-rpc'
 import { useState } from 'react';
-import Hud from '../hud/hud';
-
+import Hud from '../hud/hud'
 
 const Auth = () => {
 
@@ -10,7 +9,6 @@ const Auth = () => {
     const [registerData, setRegisterData] = useState<({username: string, email: string, password: string})>({username: '', email: '', password: ''})
     const [loginData, setLoginData] = useState<({username: string, password: string})>({username: '', password: ''})
     const [authState, setAuthState] = useState(false)
-
 
     rpc.on('mti:authSystem', () => {
         setAuthState(true);
@@ -83,7 +81,6 @@ const Auth = () => {
                     </p>
 
                 </div>
-
             </form>
         </div>   
 
@@ -127,7 +124,7 @@ const Auth = () => {
                     placeholder='password' type="password" className='py-[30px] mx-[220px] block w-[250px] h-[30px] border-solid border-b-2 border-black bg-transparent outline-none text-center' />
 
                     <button 
-                        onClick={() => rpc.callServer('checkLoginData', ({username: loginData.username, password: loginData.password}))}
+                        onClick={() => {rpc.callServer('checkLoginData', ({username: loginData.username, password: loginData.password}))}}
                         type="button" 
                         className="text-[#1e0909] mx-[160px] my-[80px] w-[350px] absolute hover:text-white border border-[#1e0909] hover:bg-[#1e0909] focus:ring-4 focus:outline-none 
                                 focus:ring-[#1e0909] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:[#1e0909] dark:text-[#1e0909] dark:hover:text-white 
