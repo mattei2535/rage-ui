@@ -1,5 +1,5 @@
 import './index.css'
-import Auth from './systems/auth/auth'
+import Auth from './systems/auth'
 import Toasts from './utils/toasts'
 
 const App = () => {

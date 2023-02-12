@@ -1,5 +1,4 @@
 import '../../index.css';
-import '../../systems/auth/auth' 
 
 const Hud = () => {
 
