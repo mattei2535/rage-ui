@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 const APanel = () => {
     const [interfaceOpen, setInterfaceOpen] = useState(false)
 
-
     const vehicleSpawn = () => {
         setInterfaceOpen(false)
         rpc.callServer('vehicleSpawn')
@@ -21,6 +20,7 @@ const APanel = () => {
     })
 
     if(interfaceOpen == true) {
+        rpc.callServer('interfaceIsOpen')
         return (
             <div>
                 <div className='ml-[25%] mt-[5%] w-[1000px] h-[700px] absolute bg-gradient-to-r from-cyan-500 to-blue-500 opacity-80'>
@@ -61,9 +61,12 @@ const APanel = () => {
                 </div>
             </div>
         )
-    } else return (
-        <></>
-    )
+    } else {
+        rpc.callServer('interfaceIsClosed')
+        return (
+            <></>
+        )
+    } 
 }
 
 
