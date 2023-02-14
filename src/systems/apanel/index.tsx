@@ -2,7 +2,23 @@ import * as rpc from 'rage-rpc';
 import React, { useEffect, useState } from 'react';
 
 const APanel = () => {
-    const [interfaceOpen, setInterfaceOpen] = useState(true)
+    const [interfaceOpen, setInterfaceOpen] = useState(false)
+
+
+    const vehicleSpawn = () => {
+        setInterfaceOpen(false)
+        rpc.callServer('vehicleSpawn')
+    }
+
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === 'ArrowUp') {
+            setInterfaceOpen(true)
+        }
+        else if (e.key === 'ArrowDown') {
+            setInterfaceOpen(false)
+        }
+    })
 
     if(interfaceOpen == true) {
         return (
@@ -18,7 +34,7 @@ const APanel = () => {
                                     dark:hover:bg-[#ffffff] dark:focus:ring-[#ffffff]">Get all weapons
                         </button>
                         <button 
-                            onClick={() => {}}
+                            onClick={() => {vehicleSpawn()}}
                             type="button" 
                             className="text-[#ffffff] w-[200px] relative  hover:text-black border border-[#ffffff] hover:bg-[#ffffff] focus:ring-4 focus:outline-none 
                                     focus:ring-[#ffffff] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:[#1e0909] dark:text-[#ffffff] dark:hover:black 
@@ -48,7 +64,8 @@ const APanel = () => {
     } else return (
         <></>
     )
-
 }
+
+
 
 export default APanel
