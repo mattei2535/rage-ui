@@ -4,6 +4,11 @@ import React, { useEffect, useState } from 'react';
 const APanel = () => {
     const [interfaceOpen, setInterfaceOpen] = useState(false)
 
+    const repairVehicle = () => {
+        setInterfaceOpen(false)
+        rpc.callServer('repairVehicle')
+    }
+
     const vehicleSpawn = () => {
         setInterfaceOpen(false)
         rpc.callServer('vehicleSpawn')
@@ -27,11 +32,11 @@ const APanel = () => {
                 <div className='text-white mt-[30px] ml-[45px] '>
                     <div className='flex relative float-left space-x-[30px]'>
                         <button 
-                            onClick={() => {}}
+                            onClick={() => {repairVehicle()}}
                             type="button" 
                             className="text-[#ffffff] w-[200px] relative hover:text-black border border-[#ffffff] hover:bg-[#ffffff] focus:ring-4 focus:outline-none 
                                     focus:ring-[#ffffff] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:[#1e0909] dark:text-[#ffffff] dark:hover:black 
-                                    dark:hover:bg-[#ffffff] dark:focus:ring-[#ffffff]">Get all weapons
+                                    dark:hover:bg-[#ffffff] dark:focus:ring-[#ffffff]">Repair Vehicle
                         </button>
                         <button 
                             onClick={() => {vehicleSpawn()}}
