@@ -21,6 +21,7 @@ const Auth = () => {
 
 
     if (authInterface === 'register') {
+        
         return (
             <div>
             <form>
