@@ -2,7 +2,7 @@ import '../../index.css';
 import * as rpc from 'rage-rpc'
 import { useState } from 'react';
 import Hud from '../../utils/hud/hud'
-import APanel from '../apanel/index'
+import APanel from '../commands/veh/index'
 
 const Auth = () => {
 
@@ -86,7 +86,6 @@ const Auth = () => {
 
     if (authState == false) return (
         <>
-            <APanel />
             <Hud />
         </>
 
