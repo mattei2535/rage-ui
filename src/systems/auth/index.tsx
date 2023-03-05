@@ -15,9 +15,8 @@ const Auth = () => {
         setAuthState(false)
     })
 
-
     if (authInterface === 'register') {
-        
+
         return (
             <div>
             <form>

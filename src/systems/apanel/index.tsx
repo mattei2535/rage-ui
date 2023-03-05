@@ -14,16 +14,16 @@ const APanel = () => {
         switch (cars) {
             case 0:
                 
-                rpc.callServer('vehicleSpawn0')
+                rpc.callServer('vehicleSpawn', 'ferrari')
                 break;
             case 1:
-                rpc.callServer('vehicleSpawn1')
+                rpc.callServer('vehicleSpawn', 'mercedes')
                 break;
             case 2:
-                rpc.callServer('vehicleSpawn2')
+                rpc.callServer('vehicleSpawn', 'bugatti')
                 break;
             case 3:
-                rpc.callServer('vehicleSpawn3')
+                rpc.callServer('vehicleSpawn', 'bmwm4')
                 break;
         
             default:
